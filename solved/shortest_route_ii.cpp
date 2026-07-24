@@ -7,6 +7,7 @@ struct Query {
     int u, v;
 };
 
+// Floyd Warshall
 void solve() {
     int n, m, q;
     cin >> n >> m >> q;
