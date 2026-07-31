@@ -11,11 +11,7 @@ _%: %.out
 	./$*.out
 
 +%: %.out
-	./$*.out < $*.in > z_actual.txt
-	cat z_actual.txt
-
-di: 
-	@diff -yw z_actual.txt z_expected.txt
+	./$*.out < $*.in 
 
 clean: 
 	echo "cleaning"
