@@ -42,7 +42,7 @@ expected<vector<int>, string> TopologicalSort(vector<vector<int>> &adjlist) {
     vector<int> ordering;
     for (int node = 0; node < n; node++) {
         if (dfs(adjlist, states, node, ordering)) {
-            return unexpected("IMPOSSIBLE");
+            return std::unexpected("IMPOSSIBLE");
         }
     }
     reverse(begin(ordering), end(ordering));
